@@ -17,7 +17,6 @@ alexander.speed(10)
 alexander.color("green")
 alexander.goto(0,0)
 alexander.direction = "stop"
-# alexander.penup()
 
 #Movimiento
 def arriba():
@@ -31,12 +30,6 @@ def izquierda():
 
 def derecha():
     alexander.direction = "right"
-
-# def stoplapiz():
-#     alexander.penup() = "lapizup"
-
-# def golapiz():
-#     alexander.pendown() = "lapizdown"
     
 ventana.onkeypress(derecha,"Right")
     
@@ -45,8 +38,6 @@ ventana.onkeypress(izquierda,"Left")
 ventana.onkeypress(abajo,"Down")
     
 ventana.onkeypress(arriba,"Up")
-
-
 
 def movimiento():
     if(alexander.direction == "up"):
@@ -65,23 +56,6 @@ def movimiento():
         x = alexander.xcor()
         alexander.setx(x+20)
         alexander.direction = "stop"
-
-
-# Texto xd
-#
-# texto = turtle.Turtle()
-# texto.speed(0)
-# texto.color("black")
-# texto.penup()
-# texto.hideturtle()
-# texto.goto(0,0)
-# texto.write("He")
-
-# This dont work
-#
-# X = input(f"Ingrese un numero: \n")
-# Y = input(f"Ingrese otro numero: \n")
-# alexander.goto(X,Y)
 
 while True:
 
@@ -102,11 +76,6 @@ while True:
         x = alexander.xcor()
         alexander.setx(x-10)
     
-    # if(alexander.isdown()):
-    #     ventana.onkeypress(stoplapiz,"M")
-    # else:
-    #     ventana.onkeypress(golapiz,"M")
-
     movimiento()
 
     ventana.update()
