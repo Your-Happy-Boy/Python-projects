@@ -30,6 +30,14 @@ def izquierda():
 
 def derecha():
     alexander.direction = "right"
+
+def dibujar():
+    if (alexander.isdown()):
+        alexander.penup()
+    else:
+        alexander.pendown()
+
+ventana.onkeypress(dibujar,"space")
     
 ventana.onkeypress(derecha,"Right")
     
